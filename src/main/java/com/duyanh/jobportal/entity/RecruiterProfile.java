@@ -11,7 +11,7 @@ public class RecruiterProfile {
     @OneToOne
     @JoinColumn(name = "user_account_id")
     @MapsId
-    private Users usersId;
+    private Users userId;
 
     private String firstName;
 
@@ -33,7 +33,7 @@ public class RecruiterProfile {
 
     public RecruiterProfile(int userAccountId, Users usersId, String firstName, String lastName, String city, String state, String country, String company, String profilePhoto) {
         this.userAccountId = userAccountId;
-        this.usersId = usersId;
+        this.userId = usersId;
         this.firstName = firstName;
         this.lastName = lastName;
         this.city = city;
@@ -41,6 +41,10 @@ public class RecruiterProfile {
         this.country = country;
         this.company = company;
         this.profilePhoto = profilePhoto;
+    }
+
+    public RecruiterProfile(Users users) {
+        this.userId=users;
     }
 
     public int getUserAccountId() {
@@ -52,11 +56,11 @@ public class RecruiterProfile {
     }
 
     public Users getUsersId() {
-        return usersId;
+        return userId;
     }
 
     public void setUsersId(Users usersId) {
-        this.usersId = usersId;
+        this.userId = usersId;
     }
 
     public String getFirstName() {
@@ -119,7 +123,7 @@ public class RecruiterProfile {
     public String toString() {
         return "RecruiterProfile{" +
                 "userAccountId=" + userAccountId +
-                ", usersId=" + usersId +
+                ", usersId=" + userId +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", city='" + city + '\'' +
