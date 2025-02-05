@@ -26,7 +26,9 @@ public class WebSecurityConfig {
         this.customAuthenticationSuccessHandler = customAuthenticationSuccessHandler;
     }
 
-    private final String[] publicUrl = {"/",
+    // Spring Security will not provide protection support for all this urls
+    private final String[] publicUrl = {
+            "/",
             "/global-search/**",
             "/register",
             "/register/**",
@@ -51,9 +53,11 @@ public class WebSecurityConfig {
             auth.anyRequest().authenticated();
         });
 
-        http.formLogin(form -> form.loginPage("/login").permitAll()
-                .successHandler(customAuthenticationSuccessHandler))
-                .logout(logout -> {
+        http.formLogin(form -> form
+                        .loginPage("/login")
+                        .permitAll()
+                        .successHandler(customAuthenticationSuccessHandler)
+                ).logout(logout -> {
                     logout.logoutUrl("/logout");
                     logout.logoutSuccessUrl("/");
                 }).cors(Customizer.withDefaults())
@@ -62,6 +66,7 @@ public class WebSecurityConfig {
         return http.build();
     }
 
+    // Custom authentication provider,
     @Bean
     public AuthenticationProvider authenticationProvider() {
         DaoAuthenticationProvider authenticationProvider = new DaoAuthenticationProvider();
@@ -70,8 +75,10 @@ public class WebSecurityConfig {
         return authenticationProvider;
     }
 
+    // Custom password encoder
     @Bean
     public PasswordEncoder passwordEncoder() {
+        // using BCryptEncoder
         return new BCryptPasswordEncoder();
     }
 }
