@@ -2,6 +2,7 @@ package com.duyanh.jobportal.services;
 
 import com.duyanh.jobportal.entity.*;
 import com.duyanh.jobportal.repository.JobPostActivityRepository;
+import com.duyanh.jobportal.repository.JobSeekerApplyRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,10 +15,12 @@ import java.util.Objects;
 public class JobPostActivityService {
 
     private final JobPostActivityRepository jobPostActivityRepository;
+    private final JobSeekerApplyRepository jobSeekerApplyRepository;
 
     @Autowired
-    public JobPostActivityService(JobPostActivityRepository jobPostActivityRepository) {
+    public JobPostActivityService(JobPostActivityRepository jobPostActivityRepository, JobSeekerApplyRepository jobSeekerApplyRepository) {
         this.jobPostActivityRepository = jobPostActivityRepository;
+        this.jobSeekerApplyRepository = jobSeekerApplyRepository;
     }
 
     public JobPostActivity addNew(JobPostActivity jobPostActivity) {
@@ -50,5 +53,10 @@ public class JobPostActivityService {
     public List<JobPostActivity> search(String job, String location, List<String> type, List<String> remote, LocalDate searchDate) {
         return Objects.isNull(searchDate) ? jobPostActivityRepository.searchWithoutDate(job, location, remote, type):
                 jobPostActivityRepository.search(job,location,remote,type,searchDate);
+    }
+
+    public void deleteJobById(int id) {
+        jobSeekerApplyRepository.deleteByJobId(id);
+        jobPostActivityRepository.deleteById(id);
     }
 }
