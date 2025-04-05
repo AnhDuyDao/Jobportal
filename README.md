@@ -57,7 +57,7 @@ $ git clone https://github.com/AnhDuyDao/Jobportal.git
 $ cd jobportal
 ```
 
-## 2. Database Configuration
+### 2. Database Configuration
 
 ### Prerequisites
 * Install MySQL Server
