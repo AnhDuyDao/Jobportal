@@ -8,7 +8,7 @@ The project includes features such as job listings, job details, job application
 
 ### Home page
 
-![Home page](https://imgur.com/30bH4BX)
+![Home page](https://i.imgur.com/30bH4BX.png)
 
 ### Log in page
 
