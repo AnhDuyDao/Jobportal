@@ -12,39 +12,39 @@ The project includes features such as job listings, job details, job application
 
 ### Log in page
 
-![Login page](https://imgur.com/mQ1O0do)
+![Login page](https://i.imgur.com/mQ1O0do.png)
 
 ### Register page
 
-![Register page](https://imgur.com/VCCdPcB)
+![Register page](https://i.imgur.com/VCCdPcB.png)
 
 ### Recruiter Dashboard page
 
-![Recruiter Dashboard page](https://imgur.com/RcHFrLT)
+![Recruiter Dashboard page](https://i.imgur.com/RcHFrLT.png)
 
 ### Recruiter Edit Profile page
 
-![Recruiter Edit Profile page](https://imgur.com/kVsaCHl)
+![Recruiter Edit Profile page](https://i.imgur.com/kVsaCHl.png)
 
 ### Recruiter Post New Job page
 
-![Recruiter Post New Job page](https://imgur.com/UuMUwZB)
+![Recruiter Post New Job page](https://i.imgur.com/UuMUwZB.png)
 
 ### Recruiter Job Details page
 
-![Recruiter Post New Job page](https://imgur.com/JmHvee7)
+![Recruiter Post New Job page](https://i.imgur.com/JmHvee7.png)
 
 ### Candidate Dashboard page
 
-![Candidate Dashboard page](https://imgur.com/A70oVRc)
+![Candidate Dashboard page](https://i.imgur.com/A70oVRc.png)
 
 ### Candidate Edit Profile page
 
-![Recruiter Edit Profile page](https://imgur.com/y2GmYe4)
+![Recruiter Edit Profile page](https://i.imgur.com/y2GmYe4.png)
 
 ### Candidate Job Details page
 
-![Recruiter Post New Job page](https://imgur.com/7HFQN46)
+![Recruiter Post New Job page](https://i.imgur.com/7HFQN46.png)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
